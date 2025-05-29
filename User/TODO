@@ -1,1 +1,6 @@
 celery -A root worker --loglevel=info
+python -m grpc_tools.protoc \
+  -I=./protos \
+  --python_out=./grpc \
+  --grpc_python_out=./grpc \
+  ./protos/user.proto
