@@ -4,3 +4,6 @@ python -m grpc_tools.protoc \
   --python_out=./grpc \
   --grpc_python_out=./grpc \
   ./protos/user.proto
+
+
+python -m grpc_tools.protoc -I=./protos --python_out=./generated --grpc_python_out=./generated protos/user.proto
